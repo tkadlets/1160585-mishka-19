@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Лидия Ткадлец](https://up.htmlacademy.ru/adaptive/19/user/1160585).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Кравченко](https://up.htmlacademy.ru/htmlcss/27/user/13921).
 
 ---
 
