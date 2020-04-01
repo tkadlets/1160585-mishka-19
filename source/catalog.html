@@ -10,7 +10,7 @@
 				<img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип Mishka">
 			</a>
 			<nav class="main-nav">
-				<button class="main-nav__toggle" type="button"></button>
+				<button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
 				<ul class="main-nav__list site-menu">
 					<li class="site-menu__item"><a>Каталог товаров</a></li>
 					<li class="site-menu__item"><a href="form.html">Вязание на заказ</a></li>
@@ -20,34 +20,60 @@
 			</nav>
 		</header>
 		<main class="page-main">
+			<section class="intro">
+				<h1 class="intro__title">Каталог товаров</h1>
+			</section>
 			<section class="catalog">
-				<h1 class="catalog__title">Каталог товаров</h1>
-				<ul class="catalog__list items-list wrapper">
-					<li class="items-list__item">
-						<img class="items-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Игрушка-заайчик">
-						<h3 class="items-list__name">Зайчик-попрыгайчик</h3>
-						<p class="items-list__info">Рост 30 см, вес 200 г</p>
-						<b class="items-list__price">1 200 руб.</b>
-						<button class="items-list__to-cart"></button>
+				<ul class="catalog-list">
+					<li class="catalog-list__item">
+						<a href="">
+							<img class="catalog-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Игрушка-зайчик">
+						</a>
+						<div class="catalog-list__details">
+							<div class="catalog-list__info">
+								<h2 class="catalog-list__name"><a href="">Зайчик-попрыгайчик</a></h2>
+								<p class="catalog-list__features">Рост 30 см, вес 200 г</p>
+							</div>
+							<div class="catalog-list__purchase">
+								<b class="catalog-list__price">1 200 руб.</b>
+								<a class="catalog-list__to-cart"></a>
+							</div>
+						</div>
 					</li>
-					<li class="items-list__item">
-						<img class="items-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаная корзина с бельем">
-						<h3 class="items-list__name">Корзина для белья</h3>
-						<p class="items-list__info">Диаметр 15 см, высота 10 см</p>
-						<b class="items-list__price">690 руб.</b>
-						<button class="items-list__to-cart"></button>
+					<li class="catalog-list__item">
+						<a href="">
+							<img class="catalog-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаная корзина с бельем">
+						</a>
+						<div class="catalog-list__details">
+							<div class="catalog-list__info">
+								<h2 class="catalog-list__name"><a href="">Корзина для белья</a></h2>
+								<p class="catalog-list__features">Диаметр 15 см, высота 10 см</p>
+							</div>
+							<div class="catalog-list__purchase">
+								<b class="catalog-list__price">690 руб.</b>
+								<a class="catalog-list__to-cart"></a>
+							</div>
+						</div>
 					</li>
-					<li class="items-list__item">
-						<img class="items-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаная корзина с игрушками">
-						<h3 class="items-list__name">Большая корзинка
-						для игрушек</h3>
-						<p class="items-list__info">Диаметр 30 см, высота 30 см</p>
-						<b class="items-list__price">1 500 руб.</b>
-						<button class="items-list__to-cart"></button>
+					<li class="catalog-list__item">
+						<a href="">
+							<img class="catalog-list__image" src="https://via.placeholder.com/260x195" width="260" height="195" alt="Вязаная корзина с игрушками">
+						</a>
+						<div class="catalog-list__details">
+							<div class="catalog-list__info">
+								<h2 class="catalog-list__name"><a href="">Большая корзинка
+								для игрушек</a></h2>
+								<p class="catalog-list__features">Диаметр 30 см, высота 30 см</p>
+							</div>
+							<div class="catalog-list__purchase">
+								<b class="catalog-list__price">1 500 руб.</b>
+								<a class="catalog-list__to-cart"></a>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</section>
-			<section class="process-video wrapper">
+			<section class="process-video">
 				<h2 class="process-video__title">Процесс производства</h2>
 				<a href="">
 					<img src="https://via.placeholder.com/260x150" width="260" height="150" alt="Воспроизвести видео процесса изготовления">
@@ -63,7 +89,7 @@
 				<li class="social-list__item social-list__item--twitter"><a href="" aria-label="Twitter Mishka"></a></li>
 			</ul>
 			<p class="page-footer__copyright">Разработано
-				<img class="page-footer__copyright__image" src="" alt="HTML-academy" width="27" height="35">
+				<img class="page-footer__copyright-image" src="" alt="HTML-academy" width="27" height="35">
 			</p>
 		</footer>
 	</body>
