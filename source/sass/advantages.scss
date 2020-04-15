@@ -1,0 +1,14 @@
+.advantages {
+  padding: 0 0 4em 2em;
+}
+
+.advantages__list {
+  @include list-reset;
+  @include font-set(1.133em, 1.176em, $font-bold);
+  color: $black;
+}
+
+.advantages-list__item {
+  padding-top: 4.941em;
+  width: 14.765em;
+}
