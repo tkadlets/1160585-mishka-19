@@ -1,0 +1,33 @@
+.contacts__title {
+  @include font-set(18px, 30px, 700);
+  @include indent-reset;
+  margin-bottom: 40px;
+}
+
+.contacts__item {
+  margin-bottom: 40px;
+}
+
+.contacts__key,
+.contacts__value {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__key {
+  text-transform: lowercase;
+}
+
+.contacts__value {
+  width: 182px;
+}
+
+.contacts__map__image {
+  width: 100%;
+  height: auto;
+}
+
+.contacts__btn {
+  margin-top: 38px;
+  margin-bottom: 38px;
+}

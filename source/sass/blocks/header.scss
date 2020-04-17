@@ -1,0 +1,40 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  transform: translateX(-50%);
+}
+
+.site-menu {
+  @include list-reset;
+  margin-top: 60px;
+
+  a {
+    @include font-set(17px, 24px, 700);
+    color: $black;
+    text-decoration: none;
+
+    &:not(.current):hover,
+    &:not(.current):focus {
+      opacity: 0.6;
+    }
+
+    &:not(.current):active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-menu__item {
+  border-bottom: 1px solid $line-color;
+  padding: 30px 0 30px 76px;
+
+
+  &:first-child {
+    border-top: 1px solid $line-color;
+  }
+}

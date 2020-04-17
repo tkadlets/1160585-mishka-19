@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  font-size: $font-size;
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 30px;
+  color: $main-text-color;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn {
+  @include font-set(17px, 20px, 700);
+  width: 259px;
+  border: 2px solid $main-text-color;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-text-color;
+  padding: 17px 0;
+  margin: 0 auto;
+}
+
+.section-title {
+  @include indent-reset;
+  @include font-set(25px, 30px, 700);
+  color: $black;
+}

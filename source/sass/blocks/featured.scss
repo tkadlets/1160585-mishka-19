@@ -1,0 +1,46 @@
+.featured {
+  padding: 30px 30px 76px 30px;
+}
+
+.featured__label {
+  @include font-set(17px, 20px, 700);
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.featured__description {
+  line-height: 24px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+
+
+  & tr {
+    border-bottom: 1px solid $line-color;
+  }
+}
+
+.data-table__key,
+.data-table__value {
+  line-height: 20px;
+  padding: 14px 0;
+}
+
+.data-table__key {
+  min-width: 97px;
+}
+
+.featured__image {
+  margin: 0 auto;
+  display: block;
+}
+
+.featured__price {
+  @include font-set(17px, 24px, 700);
+  text-align: center;
+  display: block;
+  margin: 28px 0;
+}
