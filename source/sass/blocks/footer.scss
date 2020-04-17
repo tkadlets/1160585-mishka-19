@@ -1,0 +1,15 @@
+.page-footer {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+
+.page-footer__copyright {
+  font-size: 19px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  width: 182px;
+  margin: 0 auto;
+}

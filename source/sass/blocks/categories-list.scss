@@ -1,0 +1,26 @@
+.categories-list {
+  @include list-reset;
+}
+
+.categories-list__item {
+  &:nth-child(2n+1) {
+    background-color: $primary-color;
+  }
+
+  &:nth-child(2n) {
+    background-color: $primary-color--dark;
+  }
+
+  a {
+    @include font-set(19px, 24px, 700);
+    color: $white;
+    text-decoration: none;
+    width: 165px;
+    display: block;
+    padding: 26px 0 26px 30px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
