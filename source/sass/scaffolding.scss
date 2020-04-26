@@ -65,3 +65,41 @@ input[type="radio"].visually-hidden {
   @include font-set(25px, 30px, 700);
   color: $black;
 }
+
+@media (min-width: $tablet-width) {
+  .section-title {
+    @include font-set(43px, 50px, 700);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section-title {
+    @include font-set(53px, 57px);
+  }
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    margin: 0 50px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 939px) {
+  .wrapper {
+    @include wrapper(938px - 50px * 2);
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    @include wrapper($desktop-width - 50px * 2);
+    padding: 0;
+  }
+}

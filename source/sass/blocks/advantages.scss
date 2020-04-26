@@ -1,5 +1,5 @@
 .advantages {
-  padding: 0 0 60px 30px;
+  padding-bottom: 60px;
 }
 
 .advantages__list {
@@ -11,4 +11,24 @@
 .advantages-list__item {
   padding-top: 84px;
   width: 251px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding-top: 60px;
+  }
+
+  .advantages__list {
+    @include set-flex;
+    flex-direction: column;
+    height: 490px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding-top: 70px;
+    padding-left: 175px;
+    padding-bottom: 90px;
+  }
 }

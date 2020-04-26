@@ -9,4 +9,11 @@
 
 .social-list__item:not(:last-child) {
   margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    margin: 0;
+  }
 }
