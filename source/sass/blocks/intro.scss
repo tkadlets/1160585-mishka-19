@@ -29,6 +29,7 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     padding-top: 160px;
     height: 736px;
+    position: relative;
   }
 
   .intro.intro--catalog,
@@ -44,7 +45,7 @@
 
   .intro__title {
     @include font-set(43px, 50px);
-    width: 500px;
+    width: 67%;
   }
 }
 
@@ -60,6 +61,5 @@
 
   .intro__title {
     @include font-set(53px, 57px);
-    width: 615px;
   }
 }

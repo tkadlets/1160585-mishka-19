@@ -49,8 +49,10 @@
 @media (min-width: $tablet-width) {
   .featured {
     padding-top: 45px;
+  }
+
+  .featured__wrapper {
     position: relative;
-    min-height: 610px;
   }
 
   .featured__header {
@@ -66,12 +68,9 @@
     width: 72px;
   }
 
-  .featured__wrapper {
-    @include set-flex;
-  }
-
   .featured__info {
-    width: 291px;
+    width: 50%;
+    padding-right: 43px;
   }
 
   .featured__description {
@@ -79,14 +78,20 @@
     width: 291px;
   }
 
+  .featured__data {
+    margin-top: 40px;
+  }
+
   .featured__image {
+    position: absolute;
+    top: 102px;
+    right: 50px;
     width: 333px;
     height: 404px;
   }
 
   .featured__footer {
-    @include set-absolute(351px);
-    margin-top: 55px;
+    margin-top: 42px;
     width: 291px;
   }
 }
@@ -96,7 +101,6 @@
     position: relative;
     padding-top: 134px;
     padding-bottom: 73px;
-    min-height: 762px;
   }
 
   .featured__header {
@@ -111,12 +115,11 @@
   }
 
   .featured__info {
-    margin-left: 175px;
+    padding-left: 175px;
   }
 
   .featured__image {
-    @include set-absolute (54px, auto);
-    right: 0;
+    top: -45px;
     margin: 0;
     width: 525px;
     height: 636px;
@@ -124,9 +127,16 @@
   }
 
   .featured__footer {
-    top: auto;
-    height: 138px;
-    bottom: 73px;
-    left: 175px;
+    margin-top: 100px;
+    padding-left: 175px;
+    width: 350px;
+  }
+
+  .featured__price {
+    width: 292px;
+  }
+
+  .featured__btn {
+    width: 292px;
   }
 }

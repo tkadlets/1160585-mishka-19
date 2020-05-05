@@ -1,0 +1,14 @@
+.wrapper {
+  @include wrapper(100%);
+  padding: 0 30px;
+
+
+  @media (min-width: $tablet-width) {
+    @include wrapper($tablet-width);
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper($desktop-width);
+  }
+}

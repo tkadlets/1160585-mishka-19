@@ -8,27 +8,39 @@
 
 .categories-list__item {
   position: relative;
+  cursor: pointer;
 
-  &:first-child {
+  &::after {
+    right: 35px;
+    opacity: 0.5;
+  }
+
+  &:nth-child(2n+1) {
     background-color: $primary-color;
 
-    &::after {
-      @include pseudo-element(40px, 62px, 20px, auto);
-      background: url("../img/icon-interior.svg") no-repeat;
-      right: 35px;
-      opacity: 0.5;
+    &:hover,
+    &:focus {
+      border-bottom: 5px solid $primary-color;
     }
   }
 
-  &:nth-child(2) {
+  &:nth-child(2n) {
     background-color: $primary-color--dark;
 
-    &::after {
-      @include pseudo-element(60px, 60px, 20px, auto);
-      background: url("../img/icon-toy.svg") no-repeat;
-      right: 35px;
-      opacity: 0.5;
+    &:hover,
+    &:focus {
+      border-bottom: 5px solid $primary-color--dark;
     }
+  }
+
+  &--interior::after {
+    @include pseudo-element(40px, 62px, 20px, auto);
+    background: url("../img/icon-interior.svg") no-repeat;
+  }
+
+  &--toys::after {
+    @include pseudo-element(60px, 60px, 20px, auto);
+    background: url("../img/icon-toy.svg") no-repeat;
   }
 
   a {
@@ -38,10 +50,15 @@
     width: 165px;
     display: block;
     padding: 26px 0 26px 30px;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active a,
+  &:active::after {
+    opacity: 0.3;
   }
 }
 
@@ -49,6 +66,9 @@
   .categories-list {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    padding: 0 50px;
+    margin: 0 auto;
   }
 
   .categories-list__item {

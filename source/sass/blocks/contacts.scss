@@ -35,6 +35,27 @@
 @media (min-width: $tablet-width) {
   .contacts__title {
     @include font-set(43px, 50px, 700);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      bottom: 0;
+      right: 0;
+      background: url("../img/icon-flag.svg") no-repeat;
+    }
+  }
+
+  .contacts__list {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .contacts__item {
+    width: 50%;
+    margin: 0;
   }
 
   .contacts__map__image {
@@ -44,32 +65,48 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    @include set-flex;
     @include wrapper($desktop-width - 50px * 2);
     padding-top: 70px;
-    padding-left: 175px;
+    padding-left: 125px;
     position: relative;
-    min-height: 633px;
+    padding-bottom: 105px;
   }
 
   .contacts__wrapper {
-    width: 350px;
-    padding-top: 80px;
+    width: 43%;
+    padding: 0;
+    padding-right: 110px;
+    margin: 0;
   }
 
   .contacts__title {
     @include font-set(53px, 57px);
+
+    &::after {
+      left: -100px;
+    }
   }
 
   .contacts__list {
     width: 300px;
+    flex-direction: column;
+  }
+
+  .contacts__item {
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
   }
 
   .contacts__btn {
-    @include set-absolute(auto);
-    bottom: 105px;
     margin: 0;
-    margin-left: 175px;
+    margin-top: 72px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .contacts__map__image {
