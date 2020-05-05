@@ -1,8 +1,9 @@
 .page-footer {
   background-color: $bg-color;
-  display: flex;
-  flex-direction: column;
-  min-height: 160px;
+}
+
+.page-footer__logo {
+  display: none;
 }
 
 .page-footer__copyright {
@@ -12,4 +13,25 @@
   justify-content: space-between;
   width: 182px;
   margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+
+  .page-footer__wrapper {
+    @include set-flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__copyright {
+    margin: 0;
+  }
 }

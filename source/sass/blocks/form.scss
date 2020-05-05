@@ -1,10 +1,12 @@
 .order-custom__description {
   @include font-set(13px, 24px);
-  margin: 30px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .order-form__group {
   border: none;
+  padding: 0;
 }
 
 .order-form__title {
@@ -12,6 +14,12 @@
   text-transform: uppercase;
   color: $primary-color;
   margin-bottom: 30px;
+  position: relative;
+
+  &::after {
+    @include pseudo-element(80%, 1px, 8px, 63px);
+    background-color: $primary-color;
+  }
 
   &--phone,
   &--email {
@@ -27,16 +35,46 @@
 .order-form__label-check,
 .order-form__label {
   @include font-set(17px, 18px, 700);
-  width: 155px;
+  color: $black;
+  width: 240px;
   display: block;
+}
+
+.order-form__label-radio,
+.order-form__label-check {
+  padding-left: 64px;
+  position: relative;
 }
 
 .order-form__label-radio {
   margin-bottom: 25px;
+
+  &::before {
+    @include pseudo-element(40px, 40px, -10px);
+    border: 2px solid $main-text-color;
+    border-radius: 50%;
+  }
+}
+
+input:checked + .order-form__label-radio::after {
+  @include pseudo-element(16px, 16px, 2px, 12px);
+  background-color: $primary-color;
+  border-radius: 50%;
 }
 
 .order-form__label-check {
   margin-bottom: 43px;
+
+  &::before {
+    @include pseudo-element(40px, 40px, -10px);
+    border: 2px solid $main-text-color;
+  }
+}
+
+input:checked + .order-form__label-check::after {
+  @include pseudo-element(22px, 16px, 2px, 10px);
+  background: url("../img/icon-tick.svg") no-repeat;
+  background-size: 22px 16px;
 }
 
 .order-form__field {
@@ -47,12 +85,24 @@
   border: none;
   border-bottom: 2px solid $black;
   margin-bottom: 20px;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__comment {
   @include font-set(17px, 18px);
   min-height: 142px;
   width: 100%;
+  border: 2px solid $black;
+  padding-top: 18px;
+  padding-left: 17px;
+
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__footnote {
@@ -61,5 +111,138 @@
 }
 
 .order-form__btn {
-  margin: 30px 55px;
+  margin: 30px auto;
+}
+
+@media (min-width: $tablet-width) {
+  .order-custom__description {
+    @include font-set(17px, 30px);
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+
+  .order-form__group--type {
+    padding-bottom: 40px;
+  }
+
+  .order-form__group--color {
+    padding-bottom: 15px;
+    padding-top: 60px;
+    background-color: $bg-color;
+  }
+
+  .order-form__group--name {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .order-form__group--phone {
+    background-color: $bg-color;
+    padding-top: 50px;
+  }
+
+  .order-form__group--email {
+    background-color: $bg-color;
+    padding-bottom: 50px;
+  }
+
+  .order-form__group--comment {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form__group__wrapper {
+    @include set-flex;
+  }
+
+  .order-form__title {
+    width: 25%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__group__fieldset {
+    width: 75%;
+
+    &--color,
+    &--name {
+      @include set-flex;
+    }
+  }
+
+  .order-form__label {
+    width: auto;
+    padding-right: 25px;
+    margin: auto;
+  }
+
+  .order-form__label-radio,
+  .order-form__label-check,
+  .order-form__label {
+    font-size: 19px;
+  }
+
+  .order-form__field {
+    font-size: 19px;
+    background-color: transparent;
+    margin-bottom: 24px;
+    height: 52px;
+
+    &--name {
+      width: 70%;
+      flex-grow: 1;
+    }
+
+    &--phone,
+    &--email {
+      width: 100%;
+    }
+  }
+
+  .order-form__comment {
+    height: 142px;
+    width: 100%;
+  }
+
+  .order-form__footer {
+    @include set-flex;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .order-form__footnote {
+    order: 2;
+  }
+
+  .order-form__btn {
+    margin: 0;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .order-custom__description {
+    width: 65%;
+    padding-top: 108px;
+  }
+
+  .order-form__title {
+    width: 19%;
+  }
+
+  .form__group__fieldset {
+    width: 81%;
+  }
+
+  .order-form__field--name {
+    width: 80%;
+  }
+
+  .order-form__footer {
+    width: 78%;
+    margin-left: 22%;
+    padding-left: 0;
+  }
 }

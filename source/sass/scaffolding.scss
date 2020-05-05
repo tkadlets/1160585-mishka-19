@@ -58,10 +58,32 @@ input[type="radio"].visually-hidden {
   color: $main-text-color;
   padding: 17px 0;
   margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    background-color: $main-text-color;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .section-title {
   @include indent-reset;
   @include font-set(25px, 30px, 700);
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .section-title {
+    @include font-set(43px, 50px, 700);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .section-title {
+    @include font-set(53px, 57px);
+  }
 }
