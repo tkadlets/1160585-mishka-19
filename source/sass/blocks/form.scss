@@ -1,12 +1,18 @@
 .order-custom__description {
   @include font-set(13px, 24px);
-  padding-top: 25px;
+  padding-top: 23px;
   padding-bottom: 25px;
 }
 
 .order-form__group {
   border: none;
   padding: 0;
+  margin: 0;
+
+  input,
+  textarea {
+    outline: none;
+  }
 }
 
 .order-form__title {
@@ -14,20 +20,39 @@
   text-transform: uppercase;
   color: $primary-color;
   margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 0;
   position: relative;
 
+
   &::after {
-    @include pseudo-element(80%, 1px, 8px, 63px);
+    @include pseudo-element(75%, 1px, 8px, 63px);
     background-color: $primary-color;
+  }
+
+  &--type {
+    margin-top: 0;
+    margin-bottom: 34px;
+  }
+
+  &--color {
+    margin-top: 19px;
+    margin-bottom: 36px;
+  }
+
+  &--name {
+    margin-top: 0;
   }
 
   &--phone,
   &--email {
-    margin-bottom: 0;
+    margin-bottom: 6px;
+    margin-top: 13px;
   }
 
   &--comment {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    margin-top: 13px;
   }
 }
 
@@ -44,10 +69,19 @@
 .order-form__label-check {
   padding-left: 64px;
   position: relative;
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $primary-color;
+  }
+
+  &:active::before {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__label-radio {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   &::before {
     @include pseudo-element(40px, 40px, -10px);
@@ -66,7 +100,7 @@ input:checked + .order-form__label-radio::after {
   margin-bottom: 43px;
 
   &::before {
-    @include pseudo-element(40px, 40px, -10px);
+    @include pseudo-element(40px, 40px, -11px);
     border: 2px solid $main-text-color;
   }
 }
@@ -77,14 +111,49 @@ input:checked + .order-form__label-check::after {
   background-size: 22px 16px;
 }
 
+.form__group__fieldset--phone {
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 5px;
+    bottom: 35px;
+  }
+}
+
+.form__group__fieldset--email {
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 5px;
+    bottom: 27px;
+  }
+}
+
 .order-form__field {
   @include font-set(17px, 18px);
-  color: rgba(68, 68, 68, 0.3);
+  color: $main-text-color;
   height: 52px;
   width: 100%;
   border: none;
   border-bottom: 2px solid $black;
   margin-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+  }
+
+  &:hover + svg,
+  &:focus + svg {
+    fill: $primary-color;
+    fill-opacity: 1;
+  }
+
+  &--name:first-child {
+    background-image: none;
+  }
 
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
@@ -96,8 +165,13 @@ input:checked + .order-form__label-check::after {
   min-height: 142px;
   width: 100%;
   border: 2px solid $black;
-  padding-top: 18px;
-  padding-left: 17px;
+  padding-top: 15px;
+  padding-left: 15px;
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+  }
 
 
   &::placeholder {
@@ -108,6 +182,7 @@ input:checked + .order-form__label-check::after {
 .order-form__footnote {
   @include font-set(14px, 16px);
   margin: 0;
+  margin-top: 4px;
 }
 
 .order-form__btn {
@@ -122,7 +197,7 @@ input:checked + .order-form__label-check::after {
   }
 
   .order-form__group--type {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
 
   .order-form__group--color {
@@ -152,11 +227,13 @@ input:checked + .order-form__label-check::after {
   }
 
   .form__group__wrapper {
-    @include set-flex;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .order-form__title {
-    width: 25%;
+    width: 165px;
+    padding-right: 75px;
 
     &::after {
       display: none;
@@ -164,7 +241,7 @@ input:checked + .order-form__label-check::after {
   }
 
   .form__group__fieldset {
-    width: 75%;
+    width: 503px;
 
     &--color,
     &--name {
@@ -172,9 +249,20 @@ input:checked + .order-form__label-check::after {
     }
   }
 
+  .form__group__fieldset--phone svg {
+    right: 10px;
+    bottom: 64px;
+  }
+
+  .form__group__fieldset--email svg {
+    right: 10px;
+    bottom: 55px;
+  }
+
   .order-form__label {
     width: auto;
     padding-right: 25px;
+    padding-bottom: 26px;
     margin: auto;
   }
 
@@ -182,6 +270,53 @@ input:checked + .order-form__label-check::after {
   .order-form__label-check,
   .order-form__label {
     font-size: 19px;
+  }
+
+  .order-form__label-radio,
+  .order-form__label-check {
+    padding-left: 80px;
+  }
+
+  .order-form__label-radio {
+    width: auto;
+    margin-bottom: 55px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+      left: 0;
+      top: -16px;
+    }
+  }
+
+  input:checked + .order-form__label-radio::after {
+    width: 22px;
+    height: 22px;
+    left: 15px;
+    top: -1px;
+  }
+
+  .order-form__label-check {
+    margin-bottom: 60px;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+      top: -16px;
+    }
+  }
+
+  input:checked + .order-form__label-check::after {
+    width: 33px;
+    height: 22px;
+    background-size: 33px 22px;
+    top: 0;
+  }
+
+  .order-form__title--phone,
+  .order-form__title--email,
+  .order-form__title--name {
+    padding-top: 20px;
   }
 
   .order-form__field {
@@ -229,11 +364,27 @@ input:checked + .order-form__label-check::after {
   }
 
   .order-form__title {
-    width: 19%;
+    text-align: right;
+    width: 190px;
   }
 
   .form__group__fieldset {
-    width: 81%;
+    width: 840px;
+    padding-right: 140px;
+
+    &--color {
+      padding-right: 75px;
+    }
+  }
+
+  .form__group__fieldset--phone svg {
+    right: 154px;
+    bottom: 64px;
+  }
+
+  .form__group__fieldset--email svg {
+    right: 154px;
+    bottom: 55px;
   }
 
   .order-form__field--name {
@@ -241,8 +392,7 @@ input:checked + .order-form__label-check::after {
   }
 
   .order-form__footer {
-    width: 78%;
-    margin-left: 22%;
-    padding-left: 0;
+    padding-left: 240px;
+    padding-right: 208px;
   }
 }

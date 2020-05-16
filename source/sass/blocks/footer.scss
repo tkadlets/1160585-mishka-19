@@ -1,5 +1,6 @@
 .page-footer {
   background-color: $bg-color;
+  padding-top: 30px;
 }
 
 .page-footer__logo {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   width: 182px;
   margin: 0 auto;
+  padding-top: 21px;
 }
 
 @media (min-width: $tablet-width) {
@@ -29,9 +31,27 @@
 
   .page-footer__logo {
     display: block;
+
+    &:hover > svg,
+    &:focus > svg {
+      fill: #46c1ae;
+    }
+
+    &:active > svg {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__copyright {
     margin: 0;
+
+    &:hover svg,
+    &:focus svg {
+      fill: #46c1ae;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 }
