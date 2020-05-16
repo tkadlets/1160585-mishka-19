@@ -8,17 +8,48 @@
 
 .process-video__title--top {
   @include font-set(17px, 24px, 700);
-  padding-left: 40px;
+  padding-left: 47px;
+  width: 200px;
+  margin-left: 34px;
+  position: relative;
+
+  &::before {
+    @include pseudo-element(32px, 34px, 3px, -3px);
+    background: url("../img/icon-video.svg") no-repeat;
+  }
 }
 
-.process-video__image img {
+.process-video__image {
+  position: relative;
   display: block;
+
+  img {
+    display: block;
+    width: 260px;
+    height: 150px;
+  }
+
+  &::after {
+    @include pseudo-element(101px, 77px, 50%, 50%);
+    transform: translate(-50%, -50%);
+    background: url("../img/icon-play.svg") no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1.2) translate(-40%, -40%);
+  }
+
+  &:active::after {
+    transform: scale(0.8) translate(-60%, -60%);
+    opacity: 0.3;
+  }
 }
 
 .process-video__description {
   @include font-set(15px, 24px);
   width: 194px;
-  margin: 34px 0 29px;
+  margin: 34px 0 29px 34px;
 }
 
 .process-video__title--bottom {
@@ -35,10 +66,11 @@
   .process-video__wrapper {
     width: $tablet-width;
     border: none;
+    margin-bottom: 63px;
   }
 
   .process-video__image img {
-    width: 668px;
+    @include wrapper(668px);
     height: auto;
   }
 
@@ -51,10 +83,17 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 36px;
-    padding-left: 77px;
+    padding-left: 57px;
+    position: relative;
+
+    &::before {
+      @include pseudo-element(32px, 34px, -6px, -3px);
+      background: url("../img/icon-video.svg") no-repeat;
+    }
   }
 
   .process-video__details {
+    @include wrapper(668px);
     border: 1px solid $line-color;
     padding: 43px 40px 46px 40px;
   }
@@ -76,8 +115,17 @@
   }
 
   .process-video__wrapper {
+    @include wrapper(1050px);
     display: flex;
-    width: $desktop-width;
+
+    &:hover .process-video__details,
+    &:focus .process-video__details {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active .process-video__details {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .process-video__image img {
@@ -86,7 +134,7 @@
   }
 
   .process-video__details {
-    flex-grow: 1;
+    width: auto;
     padding: 100px 65px 60px 78px;
   }
 
@@ -97,6 +145,11 @@
   .process-video__title--bottom {
     width: 150px;
     padding: 0;
+
+    &::before {
+      top: -50px;
+      left: 0;
+    }
   }
 
   .process-video__btn {

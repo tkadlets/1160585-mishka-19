@@ -10,6 +10,13 @@
   position: relative;
   cursor: pointer;
 
+  &:hover > a,
+  &:focus > a,
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(-5px);
+  }
+
   &::after {
     right: 35px;
     opacity: 0.5;
@@ -20,7 +27,7 @@
 
     &:hover,
     &:focus {
-      border-bottom: 5px solid $primary-color;
+      box-shadow: 0 -5px 0 $primary-color;
     }
   }
 
@@ -29,7 +36,7 @@
 
     &:hover,
     &:focus {
-      border-bottom: 5px solid $primary-color--dark;
+      box-shadow: 0 -5px 0 $primary-color--dark;
     }
   }
 
@@ -81,7 +88,7 @@
 
     a {
       padding-top: 36px;
-      padding-bottom: 36px;
+      padding-bottom: 55px;
     }
   }
 }

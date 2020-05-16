@@ -1,5 +1,10 @@
 .advantages {
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.advantages__title {
+  margin-bottom: 30px;
 }
 
 .advantages__list {
@@ -9,7 +14,8 @@
 }
 
 .advantages-list__item {
-  padding-top: 84px;
+  margin-bottom: 30px;
+  padding-top: 55px;
   width: 251px;
   position: relative;
 }
@@ -18,7 +24,7 @@
   order: 1;
 
   &::before {
-    @include pseudo-element(32px, 37px, 27px);
+    @include pseudo-element(32px, 37px);
     background: url("../img/icon-feature-flower.svg") no-repeat;
   }
 }
@@ -27,7 +33,7 @@
   order: 3;
 
   &::before {
-    @include pseudo-element(47px, 27px, 34px);
+    @include pseudo-element(47px, 27px);
     background: url("../img/icon-feature-money.svg") no-repeat;
   }
 }
@@ -36,7 +42,7 @@
   order: 5;
 
   &::before {
-    @include pseudo-element(34px, 28px, 29px);
+    @include pseudo-element(34px, 28px);
     background: url("../img/icon-feature-heart.svg") no-repeat;
   }
 }
@@ -45,7 +51,7 @@
   order: 2;
 
   &::before {
-    @include pseudo-element(35px, 34px, 27px);
+    @include pseudo-element(35px, 34px);
     background: url("../img/icon-feature-ball.svg") no-repeat;
   }
 }
@@ -54,7 +60,7 @@
   order: 4;
 
   &::before {
-    @include pseudo-element(55px, 23px, 36px);
+    @include pseudo-element(55px, 23px);
     background: url("../img/icon-feature-rocket.svg") no-repeat;
   }
 }
@@ -63,38 +69,40 @@
   order: 6;
 
   &::before {
-    @include pseudo-element(33px, 32px, 27px);
+    @include pseudo-element(33px, 32px);
     background: url("../img/icon-feature-gift.svg") no-repeat;
   }
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    padding-top: 60px;
+    padding-top: 55px;
+  }
+
+  .advantages__title {
+    margin-bottom: 45px;
   }
 
   .advantages__list {
-    @include set-flex;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .advantages-list__item {
     width: 50%;
-    padding-right: 12%;
-    padding-top: 120px;
-
-
-    &::before {
-      top: 59px;
-    }
+    padding-right: 14%;
+    margin-bottom: 55px;
   }
 }
 
 
 @media (min-width: $desktop-width) {
+  .advantages {
+    padding-bottom: 30px;
+  }
+
   .advantages__wrapper {
-    padding-top: 70px;
     padding-left: 175px;
-    padding-bottom: 90px;
   }
 
   .advantages-list__item {

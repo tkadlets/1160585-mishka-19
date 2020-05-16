@@ -1,0 +1,129 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  opacity: 90%;
+  z-index: 99;
+
+  &--shown {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+
+  &--shown {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.modal__title {
+  @include font-set(25px, 30px, 700);
+  width: 160px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 35px auto 20px;
+}
+
+.modal__tip {
+  @include font-set(17px, 24px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal__select-buttons {
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.modal__select-button {
+  @include font-set(17px, 16px, 700);
+  width: 82px;
+  height: 52px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  background-color: $white;
+  color: $main-text-color;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &:hover:not(.modal__select-button--active),
+  &:focus:not(.modal__select-button--active) {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &--active {
+    border-color: $primary-color;
+  }
+}
+
+.modal__button {
+  @include font-set(17px, 16px, 700);
+  text-transform: uppercase;
+  color: $white;
+  width: 100%;
+  height: 52px;
+  border: none;
+  background-color: $primary-color;
+  cursor: pointer;
+  margin-bottom: 46px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color--dark;
+  }
+
+  &:active {
+    background-color: $main-text-color;
+    opacity: 0.2;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 566px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal__wrapper {
+    width: 566px;
+    padding: 0 104px;
+  }
+
+  .modal__title {
+    @include font-set(30px, 57px);
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  .modal__tip {
+    line-height: 30px;
+  }
+
+  .modal__select-button {
+    width: 112px;
+    height: 52px;
+  }
+}

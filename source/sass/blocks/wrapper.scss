@@ -4,11 +4,11 @@
 
 
   @media (min-width: $tablet-width) {
-    @include wrapper($tablet-width);
+    width: $tablet-width;
     padding: 0 50px;
   }
 
   @media (min-width: $desktop-width) {
-    @include wrapper($desktop-width);
+    width: $desktop-width;
   }
 }

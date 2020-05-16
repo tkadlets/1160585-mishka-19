@@ -14,6 +14,10 @@
   margin-bottom: 34px;
 }
 
+.reviews__author {
+  font-style: normal;
+}
+
 .reviews__author-name {
   @include font-set(17px, 24px, 700);
   display: block;
