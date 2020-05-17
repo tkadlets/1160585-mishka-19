@@ -74,9 +74,10 @@ function initMap() {
     }
   ]
         });
+    var customMarker = "../img/icon-map-pin.svg";
     var marker = new google.maps.Marker({
         position: mishka,
         map: map,
-        icon: "../img/icon-map-pin.svg"
+        icon: customMarker
     });
 }
