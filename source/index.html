@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -131,7 +132,7 @@
             </div>
           </dl>
         </div>
-        <div class="contacts__map">
+        <div class="contacts__map" id="contacts__map">
           <picture>
             <source media="(min-width:1150px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
             <source media="(min-width:768px)" srcset="img/map-tablet@1x.jpg, img/map-tablet@2x.jpg 2x">
@@ -212,5 +213,7 @@
           </div>
         </div>
         <script src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWgHObN1iJVo5Rpu7_UfGWoYGkacfIqTE&callback=initMap">
+        </script>
       </body>
     </html>

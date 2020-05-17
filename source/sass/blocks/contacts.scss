@@ -41,6 +41,11 @@
   }
 }
 
+.contacts__map {
+  height: 457px;
+  width: 100%;
+}
+
 .contacts__map__image {
   width: 100%;
   height: auto;
@@ -52,6 +57,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 50px;
+  }
+
   .contacts__title {
     @include font-set(43px, 50px, 700);
     position: relative;
@@ -89,6 +98,7 @@
     padding-left: 125px;
     position: relative;
     padding-bottom: 105px;
+    margin-top: 50px;
   }
 
   .contacts__wrapper {
