@@ -119,6 +119,17 @@
     position: relative;
     padding-top: 134px;
     padding-bottom: 73px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .featured__wrapper::after {
+    @include pseudo-element(1050px, 23px, auto, 50px);
+    bottom: -65px;
+    background: url("../img/bg-zigzag-line.svg");
+    background-size: auto 100%;
   }
 
   .featured__header {

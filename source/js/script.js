@@ -56,3 +56,27 @@ overlay.addEventListener("click", function(evt) {
     addToCartModal.classList.remove("modal--shown");
     addToCartModal.classList.add("modal--hidden");
 });
+
+function initMap() {
+  var mishka = { lat: 59.938680, lng: 30.323027 };
+  var map = new google.maps.Map(
+    document.getElementById("contacts__map"), {
+      zoom: 17,
+      center: mishka,
+      mapTypeId: "roadmap",
+      disableDefaultUI: true,
+      styles: [
+    {
+      "featureType": "poi.business",
+      "stylers": [
+        { "visibility": "off" }
+      ]
+    }
+  ]
+        });
+    var marker = new google.maps.Marker({
+        position: mishka,
+        map: map,
+        icon: "../img/icon-map-pin.svg"
+    });
+}
