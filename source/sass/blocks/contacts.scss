@@ -75,6 +75,7 @@
     @include font-set(43px, 50px, 700);
     position: relative;
     margin-bottom: 49px;
+    margin-left: -4px;
 
     &::after {
       content: "";
@@ -134,6 +135,7 @@
   .contacts__title {
     @include font-set(53px, 57px);
     margin-bottom: 29px;
+    margin-left: 2px;
 
     &::after {
       left: -107px;
