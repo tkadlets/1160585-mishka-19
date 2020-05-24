@@ -3,7 +3,7 @@
   background-size: 575px auto;
   background-color: #fafafa;
   background-position: 50% -15px;
-  min-height: 490px;
+  min-height: 488px;
   padding-top: 70px;
   display: flex;
   flex-direction: column;
@@ -27,16 +27,23 @@
   max-width: 250px;
   color: $black;
   text-align: center;
-  margin: auto auto;
+  margin: auto;
+  margin-top: 0;
+
+  &--catalog,
+  &--form {
+    margin-top: 70px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .intro {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px auto;
-    padding-top: 160px;
+    background-position: top;
+    padding-top: 153px;
     height: 754px;
-    margin-top: -102px;
+    margin-top: -96px;
     position: relative;
     border-top: 1px solid $line-color;
 
@@ -45,8 +52,8 @@
     }
 
     &::after {
-      @include pseudo-element(100%, 24px, auto);
-      bottom: 0;
+      @include pseudo-element(100%, 22.7px, auto);
+      bottom: -3px;
       background: url("../img/bg-zigzag-fill.svg");
       background-size: auto 100%;
     }
@@ -54,18 +61,19 @@
 
   .intro.intro--catalog,
   .intro.intro--form {
-    height: 246px;
+    height: 235px;
     background-image: none;
-    padding-top: 100px;
-
-    .intro__title {
-      margin-bottom: 100px;
-    }
+    padding-top: 95px;
   }
 
   .intro__title {
     @include font-set(43px, 50px);
     max-width: 630px;
+
+    &--catalog,
+    &--form {
+      margin-top: 0;
+    }
   }
 }
 
@@ -73,24 +81,22 @@
   .intro {
     background-image: url("../img/hero-desktop@1x.jpg");
     background-size: 1150px auto;
+    margin-top: -86px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
 
     &::after {
-      background-size: auto;
+      background-size: cover;
       height: 34px;
+      bottom: -10px;
     }
   }
 
   .intro.intro--catalog,
   .intro.intro--form {
     height: 265px;
-
-    & > .intro__title {
-      margin-bottom: 110px;
-    }
   }
 
   .intro__title {

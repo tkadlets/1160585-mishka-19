@@ -1,7 +1,7 @@
 .process-video__wrapper {
   width: 260px;
   border: 1px solid $line-color;
-  margin-bottom: 30px;
+  margin-bottom: 57px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -10,11 +10,11 @@
   @include font-set(17px, 24px, 700);
   padding-left: 47px;
   width: 200px;
-  margin-left: 34px;
+  margin: 24px 0 24px 42px;
   position: relative;
 
   &::before {
-    @include pseudo-element(32px, 34px, 3px, -3px);
+    @include pseudo-element(32px, 34px, 6px, -9px);
     background: url("../img/icon-video.svg") no-repeat;
   }
 }
@@ -47,9 +47,9 @@
 }
 
 .process-video__description {
-  @include font-set(15px, 24px);
-  width: 194px;
-  margin: 34px 0 29px 34px;
+  @include font-set(13px, 24px);
+  width: 192px;
+  margin: 27px 0 25px 34px;
 }
 
 .process-video__title--bottom {
@@ -66,7 +66,7 @@
   .process-video__wrapper {
     width: $tablet-width;
     border: none;
-    margin-bottom: 63px;
+    margin-bottom: 65px;
   }
 
   .process-video__image img {
@@ -83,7 +83,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 36px;
-    padding-left: 57px;
+    padding-left: 65px;
     position: relative;
 
     &::before {
@@ -95,13 +95,14 @@
   .process-video__details {
     @include wrapper(668px);
     border: 1px solid $line-color;
-    padding: 43px 40px 46px 40px;
+    padding: 22px 40px 11px 40px;
   }
 
   .process-video__description {
+    @include font-set (15px, 27px);
     width: 100%;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 
   .process-video__btn {
@@ -135,11 +136,13 @@
 
   .process-video__details {
     width: auto;
-    padding: 100px 65px 60px 78px;
+    padding: 78px 59px 60px 78px;
   }
 
   .process-video__description {
     width: 230px;
+    line-height: 29px;
+    margin-bottom: 46px;
   }
 
   .process-video__title--bottom {
@@ -147,7 +150,7 @@
     padding: 0;
 
     &::before {
-      top: -50px;
+      top: -54px;
       left: 0;
     }
   }

@@ -1,6 +1,6 @@
 .advantages {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 33px;
+  padding-bottom: 28px;
 }
 
 .advantages__title {
@@ -14,7 +14,7 @@
 }
 
 .advantages-list__item {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   padding-top: 55px;
   width: 251px;
   position: relative;
@@ -26,6 +26,8 @@
   &::before {
     @include pseudo-element(32px, 37px);
     background: url("../img/icon-feature-flower.svg") no-repeat;
+    top: 2px;
+    left: 9px;
   }
 }
 
@@ -35,6 +37,7 @@
   &::before {
     @include pseudo-element(47px, 27px);
     background: url("../img/icon-feature-money.svg") no-repeat;
+    top: 3px;
   }
 }
 
@@ -44,6 +47,8 @@
   &::before {
     @include pseudo-element(34px, 28px);
     background: url("../img/icon-feature-heart.svg") no-repeat;
+    top: 8px;
+    left: 9px;
   }
 }
 
@@ -53,6 +58,8 @@
   &::before {
     @include pseudo-element(35px, 34px);
     background: url("../img/icon-feature-ball.svg") no-repeat;
+    top: 5px;
+    left: 4px;
   }
 }
 
@@ -62,6 +69,8 @@
   &::before {
     @include pseudo-element(55px, 23px);
     background: url("../img/icon-feature-rocket.svg") no-repeat;
+    top: 6px;
+    left: -4px;
   }
 }
 
@@ -71,6 +80,8 @@
   &::before {
     @include pseudo-element(33px, 32px);
     background: url("../img/icon-feature-gift.svg") no-repeat;
+    top: 4px;
+    left: 4px;
   }
 }
 
@@ -81,6 +92,7 @@
 
   .advantages__title {
     margin-bottom: 45px;
+    margin-left: -4px;
   }
 
   .advantages__list {
@@ -89,23 +101,30 @@
   }
 
   .advantages-list__item {
-    width: 50%;
-    padding-right: 14%;
-    margin-bottom: 55px;
+    @include font-set(20px, 22px);
+    width: 334px;
+    padding-right: 40px;
+    margin-bottom: 56px;
   }
 }
 
 
 @media (min-width: $desktop-width) {
   .advantages {
-    padding-bottom: 30px;
+    padding-bottom: 34px;
+    padding-top: 82px;
   }
 
   .advantages__wrapper {
-    padding-left: 175px;
+    padding-left: 224px;
+  }
+
+  .advantages__title {
+    margin-bottom: 48px;
   }
 
   .advantages-list__item {
-    padding-right: 23%;
+    width: 349px;
+    padding-right: 50px;
   }
 }

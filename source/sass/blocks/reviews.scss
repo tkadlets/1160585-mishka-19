@@ -1,12 +1,13 @@
 .reviews {
-  padding-bottom: 60px;
+  padding-bottom: 51px;
   position: relative;
 
   &::after {
-    @include pseudo-element(100%, 6px, auto);
-    bottom: 20px;
+    @include pseudo-element(100%, 6.5px, auto);
+    bottom: 0;
     background: url("../img/bg-zigzag-line.svg");
     background-size: auto 100%;
+    transform: scale(-1, 1);
   }
 }
 
@@ -19,7 +20,7 @@
 }
 
 .reviews__text {
-  margin-bottom: 34px;
+  margin-bottom: 26px;
 }
 
 .reviews__author {
@@ -29,6 +30,7 @@
 .reviews__author-name {
   @include font-set(17px, 24px, 700);
   display: block;
+  margin-bottom: 3px;
 }
 
 .reviews__author-username {
@@ -37,8 +39,8 @@
 
 .slider__controls {
   display: flex;
-  padding-bottom: 38px;
-  padding-top: 25px;
+  padding-bottom: 23px;
+  margin-top: 29px;
 }
 
 .slider__btn {
@@ -68,7 +70,7 @@
   .reviews {
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: 350px auto;
-    padding-bottom: 90px;
+    padding-bottom: 63px;
 
     &::after {
       height: 15px;
@@ -86,19 +88,21 @@
   }
 
   .reviews__title {
-    padding-top: 80px;
+    margin-top: 77px;
+    margin-left: -6px;
     width: 50%;
     order: 1;
   }
 
   .reviews__list {
     order: 3;
-    margin-top: 30px;
+    margin-top: 22px;
   }
 
   .reviews__text {
-    width: 642px;
+    width: 643px;
     font-size: 17px;
+    margin-bottom: 56px;
   }
 
   .reviews__btn {
@@ -121,7 +125,7 @@
 
   .slider__btn {
     border: none;
-    width: 80px;
+    width: 88px;
   }
 }
 
@@ -135,7 +139,7 @@
   }
 
   .reviews__wrapper {
-    padding-left: 175px;
+    padding-left: 224px;
     background: url("../img/review@1x.jpg") no-repeat;
     background-size: 350px auto;
     background-position: left 50px top 0;
@@ -143,7 +147,7 @@
 
     &::after {
       @include pseudo-element(1050px, 23px, auto, 50px);
-      bottom: -75px;
+      bottom: -86px;
       background: url("../img/bg-zigzag-line.svg");
       background-size: auto 100%;
     }
@@ -153,11 +157,16 @@
     }
   }
 
+  .reviews__title {
+    margin-top: 70px;
+  }
+
   .reviews__text {
     width: 770px;
+    margin-bottom: 39px;
   }
 
   .slider__controls {
-    bottom: 85px;
+    bottom: 103px;
   }
 }
