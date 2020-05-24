@@ -39,8 +39,8 @@ mainNavButton.addEventListener("click", function(evt) {
   mainNavItems[4].classList.toggle("site-menu__item--hidden");
 });
 
-for (var addToCartButton of addToCartButtons) {
-  addToCartButton.addEventListener("click", function(evt) {
+for (var i = 0; i < addToCartButtons.length; i++) {
+  addToCartButtons[i].addEventListener("click", function(evt) {
     evt.preventDefault();
     overlay.classList.remove("overlay--hidden");
     overlay.classList.add("overlay--shown");
@@ -79,3 +79,5 @@ function initMap() {
     map: map
   });
 }
+
+svg4everybody();

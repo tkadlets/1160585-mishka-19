@@ -56,7 +56,7 @@
     text-decoration: none;
     width: 165px;
     display: block;
-    padding: 26px 0 26px 30px;
+    padding: 25px 0 30px 30px;
   }
 
   &:hover::after {
@@ -87,8 +87,21 @@
     }
 
     a {
-      padding-top: 36px;
-      padding-bottom: 55px;
+      padding-top: 28px;
+      padding-bottom: 39px;
+      padding-left: 36px;
+      line-height: 30px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-list__item a {
+    padding-top: 28px;
+  }
+
+  .categories-list__item:first-child::after,
+  .categories-list__item:nth-child(2)::after {
+    top: 31px;
   }
 }

@@ -8,7 +8,7 @@
 }
 
 .social-list__item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 41px;
 }
 
 .social-list__item:hover svg,
@@ -20,10 +20,24 @@
   opacity: 0.3;
 }
 
+.social-list__item--fb svg {
+  transform: translate(-1px, -4px);
+}
+
 @media (min-width: $tablet-width) {
   .social-list {
     margin: 0;
+    margin-left: 74px;
+    margin-top: 14px;
     padding: 0;
     border: none;
+  }
+
+  .social-list__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .social-list__item--fb svg {
+    transform: translate(3px, -5px);
   }
 }
