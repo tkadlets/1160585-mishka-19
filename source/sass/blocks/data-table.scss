@@ -1,0 +1,40 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+
+
+  & tr {
+    border-bottom: 1px solid $line-color;
+  }
+}
+
+.data-table__key,
+.data-table__value {
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+.data-table__key {
+  min-width: 84px;
+}
+
+@media (min-width: $tablet-width) {
+  .data-table {
+    margin-bottom: 54px;
+  }
+
+  .data-table__key {
+    min-width: 68px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .data-table {
+    margin-bottom: 107px;
+  }
+
+  .data-table__key {
+    width: 98px;
+  }
+}

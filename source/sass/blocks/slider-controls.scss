@@ -1,0 +1,29 @@
+.slider-controls__btn {
+  width: 50%;
+  border-radius: 0;
+  border: 1px solid $line-color;
+  height: 52px;
+  background: url("../img/icon-left-arrow.svg") no-repeat center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--forward {
+    transform: scale(-1, 1);
+    border-right: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider-controls__btn {
+    border: none;
+    width: 88px;
+  }
+}

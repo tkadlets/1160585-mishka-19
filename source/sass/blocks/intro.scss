@@ -24,6 +24,7 @@
 
 .intro__title {
   @include font-set(27px, 30px, 700);
+  width: 100%;
   max-width: 250px;
   color: $black;
   text-align: center;

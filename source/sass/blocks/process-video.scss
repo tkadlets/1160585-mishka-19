@@ -6,6 +6,10 @@
   margin-right: auto;
 }
 
+.process-video__title {
+  color: $black;
+}
+
 .process-video__title--top {
   @include font-set(17px, 24px, 700);
   padding-left: 47px;
@@ -57,9 +61,11 @@
 }
 
 .process-video__btn {
-  padding: 15px 24px 14px;
+  padding: 17px 24px 16px;
+  background-color: transparent;
   margin-bottom: 33px;
-  width: auto;
+  width: 192px;
+  line-height: 16px;
 }
 
 @media (min-width: $tablet-width) {

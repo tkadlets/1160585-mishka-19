@@ -11,7 +11,7 @@
     <header class="page-header">
       <div class="page-header__wrapper wrapper">
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--close" type="button" aria-label="Открыть меню"></button>
+          <button class="main-nav__toggle main-nav__toggle--close main-nav__toggle--no-js" type="button" aria-label="Открыть меню"></button>
           <ul class="main-nav__list site-menu">
             <li class="site-menu__item site-menu__item--logo site-menu__item--current">
               <a class="page-header__logo">
@@ -25,29 +25,29 @@
             <li class="site-menu__item site-menu__item--catalog site-menu__item--shown"><a href="catalog.html">Каталог товаров</a></li>
             <li class="site-menu__item site-menu__item--order site-menu__item--shown"><a href="form.html">Вязание на заказ</a></li>
             <li class="site-menu__item site-menu__item--search site-menu__item--shown"><a href="">
-              <svg width="18px" height="18px">
-                <use xlink:href="img/sprite.svg#icon-search">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-search"/>
               </svg>
             Поиск по сайту</a></li>
             <li class="site-menu__item site-menu__item--cart site-menu__item--shown"><a href="">
-              <svg width="20px" height="19px">
-                <use xlink:href="img/sprite.svg#icon-cart">
+              <svg width="20" height="19">
+                <use xlink:href="img/sprite.svg#icon-cart"/>
               </svg>
             Корзина: пока пуста</a></li>
             <li class="site-menu__item site-menu__item--new"><a href="">Новые поступления</a></li>
             <li class="site-menu__item site-menu__item--sale"><a href="">Распродажа</a></li>
           </ul>
         </nav>
-        <b class="header__delivery">Бесплатная доставка по России</b>
+        <b class="page-header__delivery">Бесплатная доставка по России</b>
       </div>
     </header>
     <main class="page-main">
       <section class="intro">
         <h1 class="intro__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <ul class="intro__categories categories-list wrapper">
-          <li class="categories-list__item categories-list__item--interior"><a href="">Предметы
+          <li class="categories-list__item categories-list__item--interior"><a href="">Предметы<br>
           интерьера</a></li>
-          <li class="categories-list__item categories-list__item--toys"><a href="">Детские
+          <li class="categories-list__item categories-list__item--toys"><a href="">Детские<br>
           игрушки</a></li>
         </ul>
       </section>
@@ -88,7 +88,7 @@
       <section class="advantages">
         <div class="advantages__wrapper wrapper">
           <h2 class="advantages__title section-title">Коротко о нас:</h2>
-          <ul class="advantages__list">
+          <ul class="advantages__list advantages-list">
             <li class="advantages-list__item advantages__item--eco">Экологически чистые&nbsp;материалы</li>
             <li class="advantages-list__item advantages__item--price">Скандинавский стиль по&nbsp;российской цене</li>
             <li class="advantages-list__item advantages__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
@@ -111,9 +111,9 @@
               </cite>
             </blockquote>
           </div>
-          <p class="slider__controls">
-            <button class="slider__btn slider__btn--back"></button>
-            <button class="slider__btn slider__btn--forward"></button>
+          <p class="reviews__slider-controls slider-controls">
+            <button aria-label="Назад" class="slider-controls__btn slider-controls__btn--back"></button>
+            <button aria-label="Вперед" class="slider-controls__btn slider-controls__btn--forward"></button>
           </p>
           <a class="reviews__btn btn" href="">Написать</a>
         </div>
@@ -137,64 +137,69 @@
             <source media="(min-width:1150px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
             <source media="(min-width:768px)" srcset="img/map-tablet@1x.jpg, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-          </div>
-          <a href="" class="contacts__btn btn">Напишите нам</a>
-        </section>
-      </main>
-      <footer class="page-footer">
-        <div class="page-footer__wrapper wrapper">
-          <a href="" class="page-footer__logo">
-            <svg width="102px" height="34px">
-              <use xlink:href="img/sprite.svg#icon-logo-footer">
-            </svg>
-          </a>
-          <ul class="page-footer__social social-list">
-            <li class="social-list__item social-list__item--insta">
-              <a href="" aria-label="Instagram Mishka">
-                <svg width="22px" height="21px">
-                  <use xlink:href="img/sprite.svg#icon-insta">
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item social-list__item--fb">
-              <a href="" aria-label="Facebook Mishka">
-                <svg width="15px" height="28px">
-                  <use xlink:href="img/sprite.svg#icon-fb">
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item social-list__item--twitter">
-              <a href="" aria-label="Twitter Mishka">
-                <svg width="24px" height="20px">
-                  <use xlink:href="img/sprite.svg#icon-twitter">
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <p class="page-footer__copyright">Разработано
-            <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML-academy">
-              <svg width="40" height="40">
-                <use xlink:href="img/sprite.svg#icon-htmlacademy">
+          </picture>
+        </div>
+        <a href="" class="contacts__btn btn">Напишите нам</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a href="" class="page-footer__logo">
+          <svg width="102" height="34">
+            <use xlink:href="img/sprite.svg#icon-logo-footer"/>
+          </svg>
+        </a>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item social-list__item--insta">
+            <a href="" aria-label="Instagram Mishka">
+              <svg width="22" height="21">
+                <use xlink:href="img/sprite.svg#icon-insta"/>
               </svg>
             </a>
-          </p>
-        </footer>
-        <div class="overlay overlay--hidden"></div>
-        <div class="modal modal--hidden">
-          <div class="modal__wrapper wrapper">
-            <h3 class="modal__title">Добавить в корзину</h3>
-            <p class="modal__tip">Выберите размер:</p>
-            <div class="modal__select-buttons">
-              <button class="modal__select-button modal__select-button--active">S</button>
-              <button class="modal__select-button">M</button>
-              <button class="modal__select-button">L</button>
-            </div>
-            <button class="modal__button">Добавить</button>
-          </div>
-        </div>
-        <script src="/path/to/svg4everybody.min.js"></script>
-        <script src="js/script.min.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWgHObN1iJVo5Rpu7_UfGWoYGkacfIqTE&callback=initMap">
-        </script>
-      </body>
-    </html>
+          </li>
+          <li class="social-list__item social-list__item--fb">
+            <a href="" aria-label="Facebook Mishka">
+              <svg width="15" height="28">
+                <use xlink:href="img/sprite.svg#icon-fb"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item social-list__item--twitter">
+            <a href="" aria-label="Twitter Mishka">
+              <svg width="24" height="20">
+                <use xlink:href="img/sprite.svg#icon-twitter"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__copyright">Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML-academy">
+            <svg width="40" height="40">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"/>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </footer>
+    <div class="overlay overlay--hidden"></div>
+    <div class="modal modal--hidden">
+      <div class="modal__wrapper wrapper">
+        <h3 class="modal__title">Добавить в корзину</h3>
+        <p class="modal__tip">Выберите размер:</p>
+        <form class="modal__select-buttons">
+          <input class="visually-hidden" type="radio" name="size-option" id="size-s" value="size-s" checked>
+          <label for="size-s" class="modal__select-button">S</label>
+          <input class="visually-hidden" type="radio" name="size-option" id="size-m" value="size-m">
+          <label for="size-m" class="modal__select-button">M</label>
+          <input class="visually-hidden" type="radio" name="size-option" id="size-l" value="size-l">
+          <label for="size-l" class="modal__select-button">L</label>
+          <input type="submit" class="modal__button" value="Добавить">
+        </form>
+      </div>
+    </div>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWgHObN1iJVo5Rpu7_UfGWoYGkacfIqTE&callback=initMap">
+    </script>
+  </body>
+</html>

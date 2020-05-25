@@ -8,6 +8,7 @@ var overlay =  document.querySelector(".overlay");
 
 mainNavButton.classList.toggle("main-nav__toggle--open");
 mainNavButton.classList.toggle("main-nav__toggle--close");
+mainNavButton.classList.remove("main-nav__toggle--no-js");
 
 mainNavItems[1].classList.toggle("site-menu__item--shown");
 mainNavItems[1].classList.toggle("site-menu__item--hidden");

@@ -1,0 +1,28 @@
+.order-custom {
+  padding-bottom: 24px;
+}
+
+.order-custom__description {
+  @include font-set(13px, 24px);
+  padding-top: 21px;
+  padding-bottom: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-custom {
+    padding-bottom: 0;
+  }
+
+  .order-custom__description {
+    @include font-set(17px, 30px);
+    padding-top: 65px;
+    padding-bottom: 71px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-custom__description {
+    width: 747px;
+    padding: 112px 24px 71px 24px;
+  }
+}

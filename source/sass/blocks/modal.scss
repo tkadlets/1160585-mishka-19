@@ -34,24 +34,28 @@
   }
 }
 
+.modal__wrapper {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
 .modal__title {
   @include font-set(25px, 30px, 700);
   width: 160px;
   text-transform: uppercase;
   text-align: center;
-  margin: 35px auto 20px;
+  margin: 28px auto 16px;
 }
 
 .modal__tip {
-  @include font-set(17px, 24px);
+  @include font-set(15px, 24px);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .modal__select-buttons {
   text-align: center;
-  margin-bottom: 31px;
 }
 
 .modal__select-button {
@@ -62,18 +66,17 @@
   background-color: $white;
   color: $main-text-color;
   cursor: pointer;
+  padding-top: 16px;
+  display: inline-block;
+  margin-bottom: 31px;
 
   &:not(:last-child) {
     margin-right: 2px;
   }
 
-  &:hover:not(.modal__select-button--active),
-  &:focus:not(.modal__select-button--active) {
+  &:hover,
+  &:focus {
     border: 2px solid rgba(68, 68, 68, 0.3);
-  }
-
-  &--active {
-    border-color: $primary-color;
   }
 }
 
@@ -88,6 +91,7 @@
   cursor: pointer;
   margin-bottom: 46px;
 
+
   &:hover,
   &:focus {
     background-color: $primary-color--dark;
@@ -97,6 +101,10 @@
     background-color: $main-text-color;
     opacity: 0.2;
   }
+}
+
+input:checked + .modal__select-button {
+  border-color: $primary-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -119,6 +127,7 @@
   }
 
   .modal__tip {
+    font-size: 17px;
     line-height: 30px;
   }
 

@@ -55,6 +55,7 @@ input[type="radio"].visually-hidden {
 
 .btn {
   @include font-set(17px, 20px, 700);
+  font-family: $font-primary;
   width: 259px;
   border: 2px solid $main-text-color;
   display: block;

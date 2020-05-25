@@ -1,55 +1,6 @@
-.page-header {
-  position: relative;
-}
-
-.page-header__wrapper {
-  padding: 0;
-}
-
-.main-nav__toggle {
-  position: absolute;
-  width: 21px;
-  height: 20px;
-  border: none;
-  right: 28px;
-  top: 26px;
-  z-index: 1;
-  cursor: pointer;
-
-  &--close::before {
-    @include pseudo-element(2px, 27px, -2px, 9px);
-    background-color: $black;
-    transform: rotate(45deg);
-  }
-
-  &--close::after {
-    @include pseudo-element(2px, 27px, -2px, 9px);
-    background-color: $black;
-    transform: rotate(-45deg);
-  }
-
-  &--open {
-    right: 30px;
-    top: 30px;
-    width: 20px;
-    height: 2px;
-    background-color: $black;
-    padding-top: 0;
-
-    &::before {
-      @include pseudo-element(20px, 2px, 6px);
-      background-color: $black;
-    }
-
-    &::after {
-      @include pseudo-element(20px, 2px, 12px);
-      background-color: $black;
-    }
-  }
-}
-
 .site-menu {
   @include list-reset;
+  padding: 0 50px;
 
   a {
     @include font-set(17px, 24px, 700);
@@ -78,20 +29,6 @@
 
 .site-menu__item--current {
   pointer-events: none;
-}
-
-.page-header__logo-image {
-  display: block;
-  margin: 0 auto;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 .site-menu__item {
@@ -136,37 +73,7 @@
   }
 }
 
-
-.header__delivery {
-  display: none;
-}
-
-// tablet styles
-
 @media (min-width: $tablet-width) {
-  .page-header__wrapper {
-    position: relative;
-    z-index: 1;
-  }
-
-  .page-header__logo-image {
-    margin: 0;
-    width: 112px;
-    height: 46px;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    width: 100%;
-    padding: 0 50px;
-  }
-
   .site-menu__item {
     border: none;
     padding: 21px 0;
@@ -233,27 +140,9 @@
   .site-menu a {
     font-size: 15px;
   }
-
-  .header__delivery {
-    display: block;
-    padding-left: 20px;
-    padding-right: 50px;
-    margin-left: auto;
-    font-weight: 400;
-    color: $main-text-color;
-    text-align: right;
-    transform: translateY(-52px);
-  }
 }
 
-
 @media (min-width: $desktop-width) {
-  .page-header__logo-image {
-    margin: 0 auto;
-    width: 149px;
-    height: 72px;
-  }
-
   .site-menu__item {
     padding-top: 21px;
     padding-bottom: 14px;
@@ -309,9 +198,5 @@
         line-height: 44px;
       }
     }
-  }
-
-  .header__delivery {
-    transform: translateY(-41px);
   }
 }
