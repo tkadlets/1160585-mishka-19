@@ -20,7 +20,7 @@
   position: relative;
 }
 
-.advantages__item--eco {
+.advantages-list__item--eco {
   order: 1;
 
   &::before {
@@ -31,7 +31,7 @@
   }
 }
 
-.advantages__item--price {
+.advantages-list__item--price {
   order: 3;
 
   &::before {
@@ -41,7 +41,7 @@
   }
 }
 
-.advantages__item--like {
+.advantages-list__item--like {
   order: 5;
 
   &::before {
@@ -52,7 +52,7 @@
   }
 }
 
-.advantages__item--hand-made {
+.advantages-list__item--hand-made {
   order: 2;
 
   &::before {
@@ -63,7 +63,7 @@
   }
 }
 
-.advantages__item--protectionism {
+.advantages-list__item--protectionism {
   order: 4;
 
   &::before {
@@ -74,7 +74,7 @@
   }
 }
 
-.advantages__item--package {
+.advantages-list__item--package {
   order: 6;
 
   &::before {

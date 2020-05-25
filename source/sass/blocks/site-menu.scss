@@ -1,6 +1,5 @@
 .site-menu {
   @include list-reset;
-  padding: 0 50px;
 
   a {
     @include font-set(17px, 24px, 700);
@@ -74,6 +73,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .site-menu {
+    padding: 0 50px;
+  }
+
   .site-menu__item {
     border: none;
     padding: 21px 0;
