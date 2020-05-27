@@ -53,13 +53,23 @@
 }
 
 .contacts__map {
-  height: 457px;
   width: 100%;
+  position: relative;
+
+  &::after {
+    @include pseudo-element(67px, 100px, 31%, 43%);
+    background: url("../img/icon-map-pin.svg");
+  }
+}
+
+.contacts__map--js::after {
+  display: none;
 }
 
 .contacts__map__image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .contacts__btn {
@@ -105,8 +115,9 @@
     width: 225px;
   }
 
-  .contacts__map__image {
-    height: 457px;
+  .contacts__map::after {
+    top: 29%;
+    left: 47%;
   }
 
   .contacts__btn {
@@ -176,6 +187,11 @@
     width: 50%;
     right: 0;
     top: 0;
+
+    &::after {
+      top: 31%;
+      left: 45%;
+    }
   }
 
   .contacts__map__image {

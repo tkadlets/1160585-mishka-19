@@ -139,6 +139,7 @@ input:checked + .order-form__label-check::after {
   border: none;
   border-bottom: 2px solid $black;
   margin-bottom: 20px;
+  padding-right: 50px;
 
   &:hover,
   &:focus {
@@ -170,8 +171,7 @@ input:checked + .order-form__label-check::after {
   min-height: 142px;
   width: 100%;
   border: 2px solid $black;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding: 15px;
   overflow: auto;
   resize: none;
 
@@ -342,6 +342,7 @@ input:checked + .order-form__label-check::after {
     margin-bottom: 24px;
     height: 52px;
     padding-left: 17px;
+    padding-right: 65px;
 
     &--name {
       width: 70%;

@@ -5,6 +5,7 @@ var mainNavItems = document.querySelectorAll(".site-menu__item");
 var addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
 var addToCartModal = document.querySelector(".modal");
 var overlay =  document.querySelector(".overlay");
+var mapBlock = document.querySelector(".contacts__map");
 
 mainNavButton.classList.toggle("main-nav__toggle--open");
 mainNavButton.classList.toggle("main-nav__toggle--close");
@@ -57,6 +58,9 @@ overlay.addEventListener("click", function(evt) {
     addToCartModal.classList.remove("modal--shown");
     addToCartModal.classList.add("modal--hidden");
 });
+
+mapBlock.style.height = "457px";
+mapBlock.classList.add("contacts__map--js");
 
 function initMap() {
   var mishka = { lat: 59.938680, lng: 30.323027 };

@@ -30,6 +30,7 @@
   text-align: center;
   margin: auto;
   margin-top: 0;
+  padding-bottom: 30px;
 
   &--catalog,
   &--form {
@@ -43,7 +44,7 @@
     background-size: 1150px auto;
     background-position: top;
     padding-top: 153px;
-    height: 754px;
+    min-height: 754px;
     margin-top: -96px;
     position: relative;
     border-top: 1px solid $line-color;
@@ -62,7 +63,7 @@
 
   .intro.intro--catalog,
   .intro.intro--form {
-    height: 235px;
+    min-height: 235px;
     background-image: none;
     padding-top: 95px;
   }
@@ -97,7 +98,7 @@
 
   .intro.intro--catalog,
   .intro.intro--form {
-    height: 265px;
+    min-height: 265px;
   }
 
   .intro__title {

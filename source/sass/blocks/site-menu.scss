@@ -138,6 +138,10 @@
         margin: 7px 26px 2px 2px;
       }
     }
+
+    &:last-child {
+      padding-right: 250px;
+    }
   }
 
   .site-menu a {
